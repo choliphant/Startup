@@ -1,111 +1,91 @@
-  .body {
-    margin: 0;
-    /* display: flex; */
-    flex-direction: column;
-    height: 100%;
+/* ===== GLOBAL FONT DEFAULTS ===== */
+* {
+  font-family: Georgia, serif;
+  font-size: 16px;
+}
 
-    /* overflow-y:scroll; */
-  }
-
-body {
-  margin: 0;
-  /* margin: 0; */
-  display: flex;
-  flex-direction: column;
+/* ===== LAYOUT ===== */
+html {
   height: 100%;
 }
 
-  header {
-    flex: 0 40px;
-    background-color:#002E5D;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-  }
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;      /* fallback for older browsers */
+  /* min-height: 100dvh;     overrides with the correct value if supported */
+}  
 
 
+header {
+  flex: 0 0 40px;
+  background-color: #002E5D;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
 
-  .menu-items{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    border-radius: 15px;
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+}
 
-    /* background: rgb(29, 28, 66); */
-    width: 30vw;
+footer {
+  flex: 0 0 40px;
+  background-color: black;
+  color: white;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-
-  }
-
-  div{
-    font-size: 1.3em;
-  }
-
-
-  h1{
-    text-align: start;
-    color: white;
-    font-family: fantasy;
-    font-size: 1.3em;
-    margin: 0px;
-  }
-
-  main {
-    flex: 1 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: lightgray;
-  }
-  
-  footer {
-    flex: 0 40px;
-    background-color: black;
-    color: white;
-    font-size: .9em;
-
-    display: flex;
-    flex-direction: column;
-    /* justify-content: left; */
-    align-items: center;
-    /* height: 10vh; */
-  }
-footer.a{
+footer.a {
   color: black;
 }
 
-a, .nav-link{
-    color: white;
-    text-decoration: none;
-    font-family: fantasy;
-    font-size: .8em;
-    padding: 4px 8px; 
-    border-radius: 20px;   
+/* ===== TYPOGRAPHY ===== */
+div {
+  font-size: 1.3em;
 }
 
-a:hover, .nav-link:hover{
+h1 {
+  text-align: start;
+  color: white;
+  font-family: fantasy;
+  font-size: 1.3em;
+  margin: 0px;
+}
+
+/* ===== LINKS & NAV ===== */
+a, .nav-link {
+  color: white;
+  text-decoration: none;
+  font-family: fantasy;
+  font-size: 0.8em;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+a:hover, .nav-link:hover {
   transition: 0.15s;
   text-decoration: underline white;
   color: white;
-  /* color: black; */
-  /* background-color: white; */
-  /* box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3); */
-  /* transform: scale(1.1); */
-
 }
 
-img{
+/* ===== COMPONENTS ===== */
+img {
   margin: 20px;
   width: 40vh;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
 }
 
-button{
+button {
   margin: 0.1em 0;
   background-color: rgb(29, 28, 66);
   border: 0;
@@ -118,12 +98,21 @@ button{
   text-align: center;
 }
 
-
-.menu-Button{
+.menu-Button {
   font-size: 20px;
 }
 
-.box{
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-radius: 15px;
+  width: 30vw;
+}
+
+.box {
   color: white;
   font-size: 1em;
 }
