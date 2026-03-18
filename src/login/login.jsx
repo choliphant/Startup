@@ -112,14 +112,14 @@ export function Login() {
                 <h3>YOU HAVE QUESTIONS, WE HAVE ANSWERS</h3>
                 <p>Login to Ask A Question</p>
                 
-                <label>Username</label>
+                <label className="login-label">Username</label>
                 <input type = "text" id="name" placeholder="Username" />
-                <label>Password</label>
+                <label className="login-label">Password</label>
                 <input type="text" id="password" placeholder="Password" />
-                <button type="submit" onClick={() => {
+                <button className="login-button" type="submit" onClick={() => {
                     userLogin();
                   }} >Login</button>
-                <button type="submit" onClick={() => {
+                <button className="login-button" type="submit" onClick={() => {
                   createaccount();
                   }}>Create Account</button>
             

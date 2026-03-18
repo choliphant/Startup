@@ -19,16 +19,16 @@
     height: 71vh;
     /* box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);  */
 }
-label{
+.login-label{
     /* background-color: white; */
     color: white;
     font: large;
-    font-family: fantasy;
+    /* font-family: fantasy; */
     border-radius: 10px;
     margin: 10px;
 }
-button:hover{
-    transition: .5s;
+.login-button:hover{
+    transition: .01s;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
