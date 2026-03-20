@@ -29,7 +29,7 @@ function App() {
     <BrowserRouter>
       <div className="body">
         <header>
-          <h1>THE ULTIMATE HELP QUEUE</h1>
+          <h1 id="Title">THE ULTIMATE HELP QUEUE</h1>
           <nav>
             <div className="menu-items">
               <NavLink className='nav-link' to='question'>Ask A Question</NavLink>
@@ -40,7 +40,7 @@ function App() {
             </div>
           </nav>
         </header>
-        <Routes>
+        <Routes className="main-content">
           <Route path='/' element={<Login />} />
           <Route path='/question' element={<Question />} />
           <Route path='/queue' element={<Queue />} />

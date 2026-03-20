@@ -5,26 +5,53 @@
 }
 
 /* ===== LAYOUT ===== */
-html {
-  height: 100%;
+
+html, body {
+  height: 100%; /* Ensure HTML and Body take full height */
+  margin: 0;
 }
 
-body {
+.app-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Ensure the container is at least the height of the viewport */
+  min-height: 100dvh;
+  background-color: lightgray;
+  align-items: center;
+}
+
+.main-content {
+  flex: 1 0 auto; /* Allows main content to grow and fill available space */
+  align-items: center;
+}
+
+
+/* body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;      /* fallback for older browsers */
-  min-height: 100dvh;     
-}  
+  min-height: 100vh;      
+  align-items: center;
+  min-height: 100dvh;
+}    */
 
 
 header {
-  flex: 0 0 40px;
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  z-index: 100;
+  flex: 0 0 10px;
   background-color: #002E5D;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: start;
-  align-items: center;
+  align-items:first baseline;
+}
+
+#Title{
+  text-decoration: underline;
 }
 
 main {
@@ -33,16 +60,23 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: lightgray;
+  height: 95vh;
 }
 
-footer {
+ footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
   flex: 0 0 40px;
   background-color: black;
   color: white;
   font-size: 0.9em;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items:center;
+
+  /* padding-bottom: 10vh; */
 }
 
 footer.a {
@@ -106,10 +140,9 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   padding: 5px;
   border-radius: 15px;
-  width: 30vw;
+  width: 40vw;
 }
 
 .box {
